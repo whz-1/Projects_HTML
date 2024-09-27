@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PopUp-Screen</title>
+    
+    <link rel="stylesheet" href="8-25-24-popup-css - Copy.css">
+    
+</head>
+<body>
+    <div class="container">
+        <button type="submit" class="btn"onclick="OpenPopup()">Submit</button>
+        <div class="popup"id="popup">
+            <img src="smiley_face.png" width="100" height="85">
+            <h2>Thank You for playing!</h2>
+            <!--<h2>for playing!</h2> -->
+            <button type="button"onclick="ClosePopup()">ok</button>
+        </div>
+    </div>
+    <script>
+        let popup= document.getElementById("popup");
+        function OpenPopup(){
+            popup.classList.add("open-popup");
+        }
+        function ClosePopup(){
+            var div=document.getElementById("popup");
+            /*the code below added and modifed by me on 8-28-24*/
+            div.classList.add("fadeout-popup");
+            setTimeout(()=>{/*I found this settimeout
+                function on the internet, and added here.
+                https://forum.freecodecamp.org/t/javascript-modal-with-fade-out-effect/296179/2
+                */
+                
+            
+            },2000) /*1000 is miliseconds by default*/
+          
+            
+        }
+    </script>
+    
+</body>
+</html>
