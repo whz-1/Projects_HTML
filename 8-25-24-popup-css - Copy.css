@@ -1,0 +1,110 @@
+.container{
+    width: 600px;
+    height: 920px;
+    /*margin-left:33.3%;
+    margin-right:33.3%;*/ /*turned off on 9-13-24. Not a good practice*/
+    margin:auto; /*this automatically position the element in the center. Learned this on 9-13-24 from W3schools.com*/
+    background-color: #3c5077;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn{
+    padding:10px 60px;
+    background-color: #fff;
+    border: 0;
+    /*outline: none;*/
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 30px;
+   
+}
+.popup{ /*this is the popup screen*/
+    width: 100px;
+    position:absolute;
+    background-color: #fff;
+    border-radius: 6px;
+    top: 0; /*set to zero to hide the popup screen*/
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.01);
+    /*Transform is to move the popup to the center of
+    the screen
+    the scale is to reduce the size of the popup*/
+    text-align: center;
+    padding:0 30px 30px;
+    color: green;
+    visibility: visible; /*to hid the popup*/
+    /*transition: transform .4s, top .4s;*//*original code*/
+    opacity: 0; /*added by me on 8-26-24*/
+    /*I copied the code below for the fade-out effect
+    https://dev.to/nicm42/fading-in-and-fading-out-with-css-transitions-3lc1
+    */
+    /*transition: opacity 2500ms ease-in, visibility 0ms ease-in
+     250ms;*/
+}    
+.open-popup{
+    visibility: visible;
+    top: 62%;/*changed from 50% to 62% on 9-11-24*/
+    transform: translate(-50%, -50%) scale(1);
+    
+    /*on 8-26-24 I copied the 2 lines of code below for the fade-in and out effect
+    https://dev.to/nicm42/fading-in-and-fading-out-with-css-transitions-3lc1
+    */
+    opacity: 1;
+    transition: opacity 2000ms ease-in 200ms;  /*this line gives the fade-in effect*/
+    /*here I changed some of the numbers*/
+ 
+     
+}
+/*here I try to create a fadeout popup screen. 
+added on 8-28-24. Not part of the original code*/
+.fadeout-popup{
+    top: 62%;/*changed from 50% to 62% on 9-11-24*/
+    transform: translate(-50%, -50%) scale(1);
+    
+    /*the 2 lines below give the fade-out effect*/
+    opacity: 0;
+    transition: opacity 2000ms ease-in 50ms; 
+}
+
+/*below '.popup.show' is copied from the internet. It's not applicable in this case.
+https://dev.to/nicm42/fading-in-and-fading-out-with-css-transitions-3lc1*/
+.popup.show {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 250ms ease-in, visibility 0ms ease-in 0ms;
+  }
+.popup img{/*here is for styling the image inside the popup screen*/
+    width: 80px;
+    margin-top: -50px;
+    /*I disabled the two lines below because they're reduntant from 
+    the original 8-26-24*/
+    /*border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0, 0, 0.2);*/
+
+}
+.popup h2{/*here is the text inside the popup screen*/
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0 10px;
+}
+
+.popup button{ /*here is the styling for the ok button inside the popup*/
+    width: 60%;
+    margin-top: 25px;
+    margin-bottom: 1px;
+    padding:4px 0;
+    background-color: #36b906;
+    color:#fff;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    /*disable the line below on 8-26-24 from the original.reduntant*/
+    /*box-shadow: 0 2px 5px rgba(0,0, 0, 0.2);*/
+}
+
+ 
+ 
